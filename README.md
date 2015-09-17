@@ -27,8 +27,6 @@ git submodule init
 
 # clone the wp submodule into the working directory 
 git submodule update
-
-
 ```
 
 
@@ -62,7 +60,6 @@ cd ../..
 # and commit the changes
 git add .
 git commit -m "Updated Wordpress to 4.3.1"
-
 ```
 
 Now take a look at the wp-config-sample.php file, to see if any new settings have been introduced that you might want to add to wp-config.php.
