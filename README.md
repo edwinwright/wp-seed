@@ -1,6 +1,81 @@
-# WordPress Skeleton
+# WordPress Project Seed
 
-This is simply a skeleton repo for a WordPress site. Use it to jump-start your WordPress site repos, or fork it and customize it to your own liking!
+This is simply a seed repo for a WordPress project. Use it to jump-start your WordPress project repos, or fork it and customize it to your own liking!
+
+
+
+
+## Setup
+
+Rather than clone the repo, we're going to pull down the latest version into a new repository.
+
+```
+# create a new project folder
+mkdir yourproject
+
+# navigate to the new directory
+cd yourproject
+
+# initialise a new git repo
+git init
+
+# pull down the wp-seed project 
+git pull https://github.com/edwinwright/wp-seed.git
+
+# initialise the wp submodule
+git submodule init
+
+# clone the wp submodule into the working directory 
+git submodule update
+
+
+```
+
+
+
+1. Create a database and user
+- Copy /conf/local-config-sample.php to /conf/local-config.php
+- Edit and add database details
+- Navigate to http://www.yourdomain.com/wp/wp-admin/install.php to run through the setup process and install the db.
+- Login to the admin site with your newly created user account.
+- Go to 'General Settings' and change 'Site Address (URL)' from `http://www.yourdomain.com/wp` to `http://www.yourdomain.com`
+
+
+
+
+## Updating Wordpress
+
+First, deactivate all plugins.
+
+Now update the Wordpress submodule.
+
+```
+# navigate to the wordpress submodule directory
+cd src/wp
+
+# checkout the new version by tag name
+git checkout 4.3.1
+
+# navigate back to the project root
+cd ../..
+
+# and commit the changes
+git add .
+git commit -m "Updated Wordpress to 4.3.1"
+
+```
+
+Now take a look at the wp-config-sample.php file, to see if any new settings have been introduced that you might want to add to wp-config.php.
+
+Open the admin site in the browser, and run the Wordpress upgrade program.
+
+Update Permalinks and .htaccess.
+
+Reactivate plugins.
+
+
+
+
 
 ## Assumptions
 
