@@ -2,9 +2,9 @@
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
-if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
+if ( file_exists( dirname( __FILE__ ) . '/../conf/local-config.php' ) ) {
 	define( 'WP_LOCAL_DEV', true );
-	include( dirname( __FILE__ ) . '/local-config.php' );
+	include( dirname( __FILE__ ) . '/../conf/local-config.php' );
 } else {
 	define( 'WP_LOCAL_DEV', false );
 	define( 'DB_NAME', '%%DB_NAME%%' );
